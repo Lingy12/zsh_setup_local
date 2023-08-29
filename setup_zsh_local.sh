@@ -1,4 +1,5 @@
 # install on linux
+cur_dir=$CWD
 wget -O zsh.tar.xz https://sourceforge.net/projects/zsh/files/latest/download
 mkdir zsh && unxz zsh.tar.xz && tar -xvf zsh.tar -C zsh --strip-components 1
 cd zsh
@@ -7,6 +8,7 @@ cd zsh
 make
 make install
 
+cd $cur_dir
 cp ./zshrc_template ~/.zshrc
 
 export PATH=$HOME/bin/:$PATH
