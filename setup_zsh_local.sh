@@ -9,6 +9,9 @@ make install
 
 cp ./zshrc_template ~/.zshrc
 
+export PATH=$HOME/bin/zsh:$PATH
+exec $HOME/bin/zsh -l 
+
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo '[ -f $HOME/bin/zsh ] && exec $HOME/bin/zsh -l' >> ~/.profile
