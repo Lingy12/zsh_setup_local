@@ -1,5 +1,5 @@
 # install on linux
-cur_dir=$CWD
+cur_dir=$PWD
 wget -O zsh.tar.xz https://sourceforge.net/projects/zsh/files/latest/download
 mkdir zsh && unxz zsh.tar.xz && tar -xvf zsh.tar -C zsh --strip-components 1
 cd zsh
@@ -7,6 +7,7 @@ cd zsh
 ./configure --prefix=$HOME
 make
 make install
+rm -rf zsh.tar zsh zsh.tar.xz
 
 cd $cur_dir
 cp ./zshrc_template ~/.zshrc
@@ -25,4 +26,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 source ~/.zshrc
 
-rm -rf zsh.tar zsh
+
