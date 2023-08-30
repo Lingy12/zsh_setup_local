@@ -12,6 +12,6 @@ mv node-v18.17.1-linux-x64 bin/node
 echo "export PATH=$HOME/bin/node/bin:$PATH" >> ~/.zshrc
 
 git clone https://gitlab.com/Lin_GY/my_nvim.git
-cp -r my_nvim/* .config/nvim/
+cp -r my_nvim/* $HOME/.config/nvim/
 
 rm -rf my_nvim node*
