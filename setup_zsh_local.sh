@@ -10,10 +10,9 @@ make install
 rm -rf zsh.tar zsh zsh.tar.xz
 
 cd $cur_dir
-cp ./zshrc_template ~/.zshrc
 
 export PATH=$HOME/bin/:$PATH
-exec $HOME/bin/zsh -l 
+# exec $HOME/bin/zsh -l 
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -24,6 +23,10 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+cp ./zshrc_template ~/.zshrc
+
 source ~/.zshrc
+
+exec $HOME/bin/zsh -l
 
 
